@@ -12,15 +12,63 @@
       defer
       data-log-level="info"
       data-colors="#EBDEF0, --snow1, --snow2, --snow3"
-      data-intensity="blizzard"
+      data-intensity="regular"
       data-duration="30"
       data-season="December 1, January 4"
       src="/dist/snowfall.js"
     ></script>
+
+    <script>
+      function updateSnowColor(color, name) {
+        document.documentElement.style.setProperty(`--${name}`, color);
+      }
+
+      function getSnowColor(name) {
+        if (typeof getComputedStyle !== "function") return;
+
+        return getComputedStyle(document.documentElement)
+          .getPropertyValue(`--${name}`)
+          .trim();
+      }
+
+      function createColorInput(name, initialValue) {
+        const input = document.createElement("input");
+        input.setAttribute("type", "color");
+        input.setAttribute("value", initialValue);
+        input.addEventListener("change", (event) => {
+          updateSnowColor(event.target.value, name);
+        });
+        return input;
+      }
+
+      function renderColorPicker(name) {
+        document.getElementById("color-picker").innerHTML = "";
+        // Render a color input per css snow color
+        // If the color is not set for the color scheme (light, dark) do not render the input
+        const inputs = ["snow1", "snow2", "snow3"].map((name) => {
+          const initialValue = getSnowColor(name);
+          if (initialValue) {
+            const input = createColorInput(name, initialValue);
+            document.getElementById("color-picker").appendChild(input);
+          }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOMContentLoaded");
+        renderColorPicker();
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", (event) => {
+            renderColorPicker();
+          });
+      });
+    </script>
   </head>
 
   <body>
     <main>
+      <section id="color-picker"></section>
       <section>
         <h1>
           <span role="img" aria-label="snowflake emojii"> &nbsp;❄️&nbsp; </span>
@@ -28,18 +76,17 @@
           <span role="img" aria-label="snowflake emojii"> &nbsp;❄️&nbsp; </span>
           <br />
         </h1>
-        <p>Want to sprinkle some old school holiday joy on your own page?
-          <br/>
+        <p>Want to sprinkle some old school holiday joy on your own page?</p>
         <pre>
           <code>
             &lt;script src="https://cdn.jsdelivr.net/npm/@raae/let-it-snow@latest/dist/snowfall.js"&gt;&lt;/script&gt;
           </code>
         </pre>
-          <br/>
-        <small>
-          <a href="https://github.com/queen-raae/let-it-snow">
-            Documentation on GitHub
-          </a>
+        <p>
+          <small>
+            <a href="https://github.com/queen-raae/let-it-snow">
+              Documentation on GitHub
+            </a>
           </small>
         </p>
       </section>

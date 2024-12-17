@@ -61,7 +61,6 @@ p {
 
 pre {
   display: inline-block;
-  background-color: #f0f0f0;
   padding: 1em;
   border-radius: 0.5em;
   white-space: normal;
@@ -73,7 +72,7 @@ span[role="img"] {
   padding: 0 0.15em;
 }
 
-.colors {
+#color-picker {
   position: absolute;
   top: 0;
   left: 0;
