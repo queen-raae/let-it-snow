@@ -23,7 +23,10 @@ Stay updated on the script and get to know Queen Raae & family by [subscribing](
 Add the script to your website.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@raae/let-it-snow@latest/dist/snowfall.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/@raae/let-it-snow@latest/dist/snowfall.js"
+  async
+></script>
 ```
 
 ## Script Options
@@ -36,6 +39,7 @@ You can decide the color of the snow flakes. Each snowflake gets a random color 
 
 ```html
 <script
+  async
   src="https://cdn.jsdelivr.net/npm/@raae/let-it-snow@latest/dist/snowfall.js"
   data-colors="#fff000, --snow-color-1, --snow-color-2"
 ></script>
@@ -51,6 +55,7 @@ You can choose the intensity of the snow.\
 <script
   src="https://cdn.jsdelivr.net/npm/@raae/let-it-snow@latest/dist/snowfall.js"
   data-intensity="blizzard"
+  async
 ></script>
 ```
 
@@ -64,6 +69,7 @@ You can decide how long the snow should fall for.\
 <script
   src="https://cdn.jsdelivr.net/npm/@raae/let-it-snow@latest/dist/snowfall.js"
   data-duration="30"
+  async
 ></script>
 ```
 
@@ -77,6 +83,7 @@ You may decide the time of year the snow should fall.\
 <script
   src="https://cdn.jsdelivr.net/npm/@raae/let-it-snow@latest/dist/snowfall.js"
   data-season="December 1, January 4"
+  async
 ></script>
 ```
 
@@ -90,6 +97,7 @@ You can decide the log level of the script.\
 <script
   src="https://cdn.jsdelivr.net/npm/@raae/let-it-snow@latest/dist/snowfall.js"
   data-log-level="debug"
+  async
 ></script>
 ```
 
