@@ -30,8 +30,8 @@ Add the script to your website.
 
 ### Colors
 
-You can decide the color of the snow flakes. Each snowflake gets a random color from the list.
-**Type:** Comma separated list of hex colors, or css variable names resolving to hex colors.
+You can decide the color of the snow flakes. Each snowflake gets a random color from the list.\
+**Type:** Comma separated list of hex colors, or css variable names resolving to hex colors.\
 **Default:** `"#fff"`
 
 ```html
@@ -43,8 +43,8 @@ You can decide the color of the snow flakes. Each snowflake gets a random color 
 
 ### Intensity
 
-You can choose the intensity of the snow.
-**Type**: One of "light", "regular" or "blizzard".
+You can choose the intensity of the snow.\
+**Type**: One of "light", "regular" or "blizzard".\
 **Default:** `"regular"`
 
 ```html
@@ -56,8 +56,8 @@ You can choose the intensity of the snow.
 
 ### Duration
 
-You can decide how long the snow should fall for.
-**Type**: Positive integer of seconds.
+You can decide how long the snow should fall for.\
+**Type**: Positive integer of seconds.\
 **Default:** `"15"`
 
 ```html
@@ -69,8 +69,8 @@ You can decide how long the snow should fall for.
 
 ### Season
 
-You may decide the time of year the snow should fall.
-**Type**: Comma separated dates, starting with the first day of the season and ending with the last day of the season.
+You may decide the time of year the snow should fall.\
+**Type**: Comma separated dates, starting with the first day of the season and ending with the last day of the season.\
 **Default:** `"December 1, January 4"`
 
 ```html
@@ -82,8 +82,8 @@ You may decide the time of year the snow should fall.
 
 ### Log Level
 
-You can decide the log level of the script.
-**Type**: One of "error", "warn", "info" or "silent".
+You can decide the log level of the script.\
+**Type**: One of "error", "warn", "info" or "silent".\
 **Default:** `"warn"`
 
 ```html
